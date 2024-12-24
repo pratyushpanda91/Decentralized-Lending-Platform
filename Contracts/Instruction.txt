@@ -9,6 +9,3 @@ After that follow output images serially from 1 to 15 / CapstoneProjectOutput.pd
 Project By 
 
 Pratyush Panda
-Baishakhi Jena
-Diptiranjan Panda
-Rakesh Ranjan Behera
