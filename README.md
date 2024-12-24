@@ -60,20 +60,20 @@ git clone https://github.com/pratyushpanda91/Decentralized-Lending-Platform.git
 
 #### Add Funds to the Lending Platform
 1. In the **Deployed Contracts** section, locate the `addFunds()` function.
-2. Enter an amount of test Ether to deposit (e.g., `2 Ether`).
+2. Enter an amount of test Ether to deposit (e.g., `5 Ether`).
 3. Click the **Transact** button and confirm the transaction.
 
 #### Approve collateral From Test Token
 1. Use the `IERC20.sol` function.
 2. Approve:
    - Sender ~ Address
-   - value ~ >Loan amonut(e.g. `2` ethers in wei)
+   - value ~ >Loan amonut(e.g. `5` ethers in wei)
 #### Request a Loan with collateral
 1. Use the `requestLoanWithCollateral()` function.
 2. Parameters:
-   - Loan amount in Ether (e.g., `0.5 Ether`).
+   - Loan amount in Ether (e.g., `2 Ether`).
    - Address of the collateral token (e.g., the address of an ERC20 token contract if available).
-   - Collateral amount (e.g., `2` units of the collateral token).
+   - Collateral amount (e.g., `5` ethers of the collateral token).
 3. Submit the transaction and verify the loan creation using the `loans` mapping.
 
 #### Fund a Loan
@@ -109,10 +109,10 @@ git clone https://github.com/pratyushpanda91/Decentralized-Lending-Platform.git
 ---
 ## Test Cases
 ### Scenario 1: Successful Loan
-1. Add `2 ETH` to the contract.
-2. Request a loan for `0.5 ETH` using `2 ether` as `collateral`.
+1. Add `5 ETH` to the contract.
+2. Request a loan for `2 ETH` using `5 ETH` as `collateral`.
 3. Fund the loan using the `fundLoan` function.
-4. Repay the loan by sending `1.02 ETH`.
+4. Repay the loan by sending `2.04 ETH`.
 5. Collateral is returned to the borrower.
    
 ### Scenario 2: Loan Default
