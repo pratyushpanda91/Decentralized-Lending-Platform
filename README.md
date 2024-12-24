@@ -106,14 +106,14 @@ git clone https://github.com/pratyushpanda91/Decentralized-Lending-Platform.git
 
 ---
 ## Test Cases
-###Scenario 1: Successful Loan###
+### Scenario 1: Successful Loan
 1. Add 2 ETH to the contract.
 2. Request a loan for 0.5 ETH using 2 ether as collateral.
 3. Fund the loan using the fundLoan function.
 4. Repay the loan by sending 1.02 ETH.
 5. Collateral is returned to the borrower.
    
-###Scenario 2: Loan Default###
+### Scenario 2: Loan Default
 1. Request a loan and let the due date pass(1 min here to test).
 2. Call liquidateCollateral.
 3. Collateral is liquidated, and the loan is marked Defaulted.
