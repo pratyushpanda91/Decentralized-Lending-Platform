@@ -1,0 +1,14 @@
+Step 1 : compile and deploy SafeMath.sol
+Step 2 : compile and deploy IERC20.sol
+Step 3 : compile and deploy CryptoCollaterizedLending.sol
+
+SafeMath.sol ~> IERC20.sol ~> CryptoCollaterizedLending.sol
+
+After that follow output images serially from 1 to 15 / CapstoneProjectOutput.pdf
+
+Project By 
+
+Pratyush Panda
+Baishakhi Jena
+Diptiranjan Panda
+Rakesh Ranjan Behera
