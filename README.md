@@ -27,7 +27,7 @@ This repository contains the Solidity code for a decentralized lending platform 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/pratyushpanda91/Decentralized-Lending-Platform.git
 ```
 
 ### 2. Open Remix IDE
@@ -58,10 +58,15 @@ git clone https://github.com/your-username/your-repo-name.git
 
 #### Add Funds to the Lending Platform
 1. In the **Deployed Contracts** section, locate the `addFunds()` function.
-2. Enter an amount of test Ether to deposit (e.g., `1 Ether`).
+2. Enter an amount of test Ether to deposit (e.g., `2 Ether`).
 3. Click the **Transact** button and confirm the transaction.
 
-#### Request a Loan
+#### Approve collateral From Test Token
+1. Use the `IERC20.sol` function.
+2. Approve:
+   - Sender ~ Address
+   - value ~ >Loan amonut(e.g. `2` ethers in wei)
+#### Request a Loan with collateral
 1. Use the `requestLoanWithCollateral()` function.
 2. Parameters:
    - Loan amount in Ether (e.g., `0.5 Ether`).
@@ -91,7 +96,29 @@ git clone https://github.com/your-username/your-repo-name.git
 - **Testing Tokens**: Use dummy values or deploy a test ERC20 token if needed for collateral testing.
 
 ---
+## Tips for Testing
+- Use different accounts for lender, borrower and liquidator.
+- Monitor balances and states using the contract's view functions.
+- **Add edge cases like:**
+   -Requesting loans without sufficient collateral.
+   -Trying to fund loans with insufficient contract balance.
+   -Repaying with incorrect amounts.
 
+---
+## Test Cases
+###Scenario 1: Successful Loan###
+1. Add 2 ETH to the contract.
+2. Request a loan for 0.5 ETH using 2 ether as collateral.
+3. Fund the loan using the fundLoan function.
+4. Repay the loan by sending 1.02 ETH.
+5. Collateral is returned to the borrower.
+   
+###Scenario 2: Loan Default###
+1. Request a loan and let the due date pass(1 min here to test).
+2. Call liquidateCollateral.
+3. Collateral is liquidated, and the loan is marked Defaulted.
+
+---
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
@@ -100,8 +127,10 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Author
 
-- **Name**: Your Name
-- **GitHub**: [Your Profile](https://github.com/your-username)
+- **Name**: Pratyush Panda
+- **GitHub**: [Your Profile](https://github.com/pratyushpanda91)
+- **X**: [Twitter Profile](https://x.com/pandapratyush91)
+- **LinkedIn**: [Profile](https://www.linkedin.com/in/pratyushpanda91/)
 
 ---
 
