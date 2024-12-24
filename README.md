@@ -1,6 +1,8 @@
 # Crypto Collateralized Lending
 
-This repository contains the Solidity code for a decentralized lending platform that allows users to request and fund loans using cryptocurrency as collateral. The code is designed for testing on Remix with test Ether.
+This repository contains the `Solidity` code for a **decentralized lending platform** that allows users to request and fund loans using cryptocurrency with collateral. 
+
+This version focuses solely on testing the smart contracts in `Remix with test Ether` and **does not require any external wallet or environment setup**.
 
 ---
 
@@ -97,8 +99,8 @@ git clone https://github.com/pratyushpanda91/Decentralized-Lending-Platform.git
 
 ---
 ## Tips for Testing
-- Use different accounts for lender, borrower and liquidator.
-- Monitor balances and states using the contract's view functions.
+- Use `different accounts` for lender, borrower and liquidator.
+- Monitor `balances` and `states` using the contract's view functions.
 - **Add edge cases like:**
    -Requesting loans without sufficient collateral.
    -Trying to fund loans with insufficient contract balance.
@@ -107,16 +109,16 @@ git clone https://github.com/pratyushpanda91/Decentralized-Lending-Platform.git
 ---
 ## Test Cases
 ### Scenario 1: Successful Loan
-1. Add 2 ETH to the contract.
-2. Request a loan for 0.5 ETH using 2 ether as collateral.
-3. Fund the loan using the fundLoan function.
-4. Repay the loan by sending 1.02 ETH.
+1. Add `2 ETH` to the contract.
+2. Request a loan for `0.5 ETH` using `2 ether` as `collateral`.
+3. Fund the loan using the `fundLoan` function.
+4. Repay the loan by sending `1.02 ETH`.
 5. Collateral is returned to the borrower.
    
 ### Scenario 2: Loan Default
-1. Request a loan and let the due date pass(1 min here to test).
-2. Call liquidateCollateral.
-3. Collateral is liquidated, and the loan is marked Defaulted.
+1. Request a loan and let the due date pass(`1 min` here to test).
+2. Call `liquidateCollateral`.
+3. Collateral is liquidated and the loan is marked `Defaulted`.
 
 ---
 ## License
@@ -127,8 +129,8 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Author
 
-- **Name**: Pratyush Panda
-- **GitHub**: [Your Profile](https://github.com/pratyushpanda91)
+- **Name**: `Pratyush Panda`
+- **GitHub**: [ Profile](https://github.com/pratyushpanda91)
 - **X**: [Twitter Profile](https://x.com/pandapratyush91)
 - **LinkedIn**: [Profile](https://www.linkedin.com/in/pratyushpanda91/)
 
